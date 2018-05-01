@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+    <div class="container">
+    <h1>Welcome to Touristy Chennai!</h1>
+    <p>View All the Must Visit Places in Chennai </p>
+    <p><a class="btn btn-primary btn-lg" href="campgrounds/new">Add New Must Visit</a></p>
+    </div>
+</header>
+
+
+<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+<% campgrounds.forEach(function(campground){ %>
+<div class="col-md-3 col-md-6"> 
+<div class="thumbnail">
+    <img id="ind-image" src="<%=campground.image %>" >
+    <div class="caption">
+    <h4><%= campground.name %> </h4>
+</div>
+<p><a class="btn btn-primary" style="margin-top:5px;" href="/campgrounds/<%=campground._id%>">More Info</a></p>
+</div>
+</div>    
+<% }) %>
+
+</div>
+<% include ../partials/footer %>

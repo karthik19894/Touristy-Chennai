@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+    <h1 style="text-align:center;"> Add a New Must Visit Place</h1>
+    <div class="row">
+        <div style="width:30%; margin:30px auto;">
+            <form action='/campgrounds' method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name of the Place">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="Expected Expense" min="1.0" step="1.0">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn=lg btn-primary btn-block" type="submit">
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+
+
+
+
+
+<% include ../partials/footer %>
