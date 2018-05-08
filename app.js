@@ -18,8 +18,7 @@ var indexRoutes=require('./routes/index'),
 campgroundRoutes=require('./routes/campgrounds'),
 commentRoutes=require('./routes/comments');
 
-//"mongodb://karthik:password@ds135594.mlab.com:35594/touristychennai"
-// mongoose.connect("mongodb://localhost/touristychennai");
+
 mongoose.connect(process.env.DATABASEURL);
 
 
@@ -63,4 +62,3 @@ app.use('/campgrounds/:id/comments',commentRoutes);
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("Touristy Chennai Server has Started! :) ");
 });
-
